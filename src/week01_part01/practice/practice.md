@@ -12,7 +12,7 @@ Learning Objectives
 
 Problem 1
 ---------
-****Determine the set of items S to buy below.**<br>
+***Determine the set of items S to buy below.***<br>
 <code>bananas,2.50
 apples,4
 beans,11.50
@@ -40,4 +40,4 @@ Of all the subsets that end up in Col, find the sub-list L' with the largest sum
 
 **As part of your answer, show the updated collection Col at the 
 beginning of each iteration of the inner-loop.**
-<br><br>**
+<br><br>
