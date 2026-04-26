@@ -3,15 +3,37 @@ package week01_part02;
 public class TestFindLargest
 {
 	static <E extends Comparable<? super E>>
-	E findLargestOfThree(E x, E y, E z)
+	E findLargestOfThreeWithSuper(E x, E y, E z)
 	{
 		if (x.compareTo(y) > 0)
 			return (x.compareTo(z) > 0) ? x : z;
 		else
 			return (y.compareTo(z) > 0) ? y : z; 
-	} 
+	}
 
-	static <E, T> void foo(E a, E b, T c)
+    static <E extends Comparable>
+    E findLargestOfThree(E x, E y, E z)
+    {
+        if (x.compareTo(y) > 0)
+            return (x.compareTo(z) > 0) ? x : z;
+        else
+            return (y.compareTo(z) > 0) ? y : z;
+    }
+
+    /*
+    // TODO: Try commenting the code below out.
+    //       Why does it result in compilation errors?
+    static <E>
+    E findLargestOfThreeWithoutCompare(E x, E y, E z)
+    {
+        if (x.compareTo(y) > 0)
+            return (x.compareTo(z) > 0) ? x : z;
+        else
+            return (y.compareTo(z) > 0) ? y : z;
+    }
+     */
+
+    static <E, T> void foo(E a, E b, T c)
 	{
 		System.out.println(a + "\n" + b + "\n" + c);
 	}
@@ -28,6 +50,9 @@ public class TestFindLargest
 
 		x = findLargestOfThree(a, b, c);
 		System.out.println(x.the_int + " " );
+
+        x = findLargestOfThreeWithSuper(a, b, c);
+        System.out.println(x.the_int + " " );
 
 		foo(a, b, "hello");
 	}
