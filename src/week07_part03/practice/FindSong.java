@@ -22,9 +22,13 @@ public class FindSong
 
         // Creates a hash table of SongEntry objects with the song title as key.
         FHmapSC<String, SongEntry> tableOfSongs = new FHmapSC<String, SongEntry>();
-        // TODO: Iterate over "allSongs" and insert each SongEntry object in
+        // Iterate over "allSongs" and insert each SongEntry object in
         //       the table by the song title.
-
+        for  (SongEntry song : allSongs){
+            tableOfSongs.insert(
+                    song.getTitle(),
+                    new SongEntry(song.getTitle(), song.getDuration(), song.getArtistName(), song.getGenre(), "" + song.getID()));
+        }
 
         System.out.println("The number of elements in table " + tableOfSongs.getElementCount());
 
@@ -33,7 +37,7 @@ public class FindSong
         System.out.println("Enter a title to search for. For example \"Blues Power\" or \"does not exist\":");
         String request = keyboard.nextLine();
         // Checks if the table contains the user's request as key
-        // TODO: Complete the implementation such that it checks if a key exists.
+        // Complete the implementation such that it checks if a key exists.
         boolean isFound = tableOfSongs.containsKey(request);
         // Displays a message based on whether the song is found.
         String message = isFound ? "found" : "not found";
