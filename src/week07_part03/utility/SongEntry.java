@@ -25,7 +25,7 @@ public class SongEntry implements Comparable<SongEntry>
 	private int id;
 
 	// default constructor
-	protected SongEntry(String title, int duration, String artist_name, String genre, String id)
+    public SongEntry (String title, int duration, String artist_name, String genre, String id)
 	{
 		this.title = title;
 		setDuration(duration);

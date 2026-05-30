@@ -189,9 +189,9 @@ public class FHmapSC<K,V>
      */
     public boolean containsKey(K key)
     {
-        // TODO: Complete the implementation such that it checks if a key exists.
+        // Complete the implementation such that it checks if a key exists.
         for (HashEntries<K, V> tableKey: table){
-            if (tableKey.getKey().equals(key)) return true;
+            if (tableKey != null && tableKey.getKey().equals(key)) return true;
         }
     	return false;
     }
