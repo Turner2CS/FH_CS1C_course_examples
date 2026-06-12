@@ -13,7 +13,6 @@ public class Employee
 
 	public Employee(String name , int id)
 	{
-		this();
 		setName(name);
 		setID(id);
 		salary = 1500.00;

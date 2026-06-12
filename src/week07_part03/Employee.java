@@ -10,7 +10,6 @@ public class Employee
 
 	public Employee(String name , int ss)
 	{
-		this();
 		setName(name);
 		setSS(ss);
 	}
